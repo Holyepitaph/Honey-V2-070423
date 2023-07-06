@@ -22,3 +22,12 @@ html, body, main {
     width:100%;
     background-color: brown;
 }
+
+
+.HeadA{
+    position: absolute;
+    top: 5vh;
+    left: 30vw;
+    font-size: 60px;
+}
+

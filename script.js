@@ -17,6 +17,22 @@ function preventScroll(event) {
 //</>Prevents scrolling from occuring
 
 //Effects/or animations
+
+$.Velocity.RegisterEffect("tryMe", {
+  defaultDuration: 1000,
+  calls: [
+    [{
+      opacity: '0',
+      scale: '1',
+    }, .5],
+    [{
+      opacity: '1',
+      scale: '10',
+ 
+    }, .5]
+  ]
+});
+
 $.Velocity.RegisterEffect("moveUp1", {
     defaultDuration: 2000,
     calls: [
@@ -89,6 +105,36 @@ $.Velocity.RegisterEffect("moveUp1", {
     ]
   });
 
+  $.Velocity.RegisterEffect("textOut", {
+    defaultDuration: 2000,
+    calls: [
+      [{
+        opacity: '0',
+        scale: '1',
+   
+      }, .2],
+      [{
+        opacity: '0',
+        scale: '0.8',
+      }, .8]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textIn", {
+    defaultDuration: 2000,
+    calls: [
+      [{
+        scale: '1',
+      }, .5],
+      [{
+        opacity: '1',
+        scale: '1',
+   
+      }, .5]
+    ]
+  });
+
+
 function movement21(){
     $(".ElementA").velocity("moveDown1");
     $(".ElementB").velocity("moveDown1");
@@ -112,6 +158,12 @@ function movement12(){
     $(".ElementB").velocity("moveUp1");
     $(".ElementC").velocity("moveUp1");
 }
+
+function elementStackA(){
+
+}
+
+
 //</>Effects/or animations
 
 //Adds adnimation when currentFrame does stuff
@@ -169,17 +221,18 @@ $(window).on('keydown', function(e) {
         keyPrev = (e.which == 37 || e.which == 38 || e.which == 100|| e.which == 104|| e.which == 65|| e.which == 87);
 
     if (keyNext) {
-      e.preventDefault();
-      currentFrame++;
-      forward = true;
-      currentFrameFunc();
+      // e.preventDefault();
+      // currentFrame++;
+      // forward = true;
+      // currentFrameFunc();
+      $(".HeadA").velocity("textOut");
 
     } else if (keyPrev) {
-      e.preventDefault();
-      
-      currentFrame--;
-      forward = false;
-      currentFrameFunc();
+      // e.preventDefault();
+      // currentFrame--;
+      // forward = false;
+      // currentFrameFunc();
+      $(".HeadA").velocity("tryMe");
     }
   });
   //</>Beginning Function for Keyboard buttons
