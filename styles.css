@@ -1,0 +1,24 @@
+html, body, main {
+    height:100%;
+    width: 100%;
+    padding:0 0 0 0;
+    margin: 0 0 0 0;
+    overflow: hidden;
+}
+
+
+.ElementA{
+    height:100%;
+    width:100%;
+    background-color: aqua;
+}
+.ElementB{
+    height:100%;
+    width:100%;
+    background-color: bisque;
+}
+.ElementC{
+    height:100%;
+    width:100%;
+    background-color: brown;
+}
