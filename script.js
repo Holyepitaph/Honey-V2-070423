@@ -18,18 +18,20 @@ function preventScroll(event) {
 
 //Effects/or animations
 
-$.Velocity.RegisterEffect("tryMe", {
+$.Velocity.RegisterEffect("test", {
   defaultDuration: 1000,
   calls: [
-    [{
-      opacity: '0',
-      scale: '1',
-    }, .5],
-    [{
-      opacity: '1',
-      scale: '10',
- 
-    }, .5]
+      [{
+          opacity: '100%',
+          translateY: '0%',
+          translateX: '0%',
+        }, 0.50],
+        [{
+          opacity: '0%',
+          scale: ".8",
+          translateY: '25%',
+          translateX: '25%',
+        }, 0.50]
   ]
 });
 
@@ -105,8 +107,8 @@ $.Velocity.RegisterEffect("moveUp1", {
     ]
   });
 
-  $.Velocity.RegisterEffect("textOut", {
-    defaultDuration: 2000,
+  $.Velocity.RegisterEffect("textOutA", {
+    defaultDuration: 1000,
     calls: [
       [{
         opacity: '0',
@@ -120,8 +122,70 @@ $.Velocity.RegisterEffect("moveUp1", {
     ]
   });
 
-  $.Velocity.RegisterEffect("textIn", {
-    defaultDuration: 2000,
+  $.Velocity.RegisterEffect("textOutB", {
+    defaultDuration: 800,
+    calls: [
+        [{
+            opacity: '100%',
+            translateY: '0%',
+            translateX: '0%',
+          }, 0.20],
+          [{
+            opacity: '0%',
+            scale: ".8",
+            translateY: '50%',
+            translateX: '50%',
+          }, 0.80]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textOutC", {
+    defaultDuration: 800,
+    calls: [
+        [{
+          opacity: '100%',
+          translateY: '0%',
+        }, 0.50],
+        [{
+          opacity: '0%',
+          scale: ".8",
+          translateY: '25%',
+        }, 0.50]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textOutD", {
+    defaultDuration: 800,
+    calls: [
+        [{
+          opacity: '100%',
+          translateX: '0%',
+        }, 0.50],
+        [{
+          opacity: '0%',
+          scale: ".8",
+          translateX: '25%',
+        }, 0.50]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textOutE", {
+    defaultDuration: 800,
+    calls: [
+        [{
+          opacity: '100%',
+          translateX: '0%',
+        }, 0.50],
+        [{
+          opacity: '0%',
+          scale: ".8",
+          translateX: '-25%',
+        }, 0.50]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textInA", {
+    defaultDuration: 1000,
     calls: [
       [{
         scale: '1',
@@ -129,40 +193,147 @@ $.Velocity.RegisterEffect("moveUp1", {
       [{
         opacity: '1',
         scale: '1',
-   
       }, .5]
     ]
   });
 
+  $.Velocity.RegisterEffect("textInB", {
+    defaultDuration: 3000,
+    calls: [
+          [{
+            opacity: '0%',
+            scale: "1",
+            
+          }, 0.50],
+          [{
+            opacity: '0%',
+            translateY: '-25%',
+            translateX: '-25%',
+          }, 0.20],
+          [{
+            opacity: '100%',
+            translateY: '0%',
+            translateX: '0%',
+          }, 0.30]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textInC", {
+    defaultDuration: 3000,
+    calls: [
+        [{
+            opacity: '0%',
+            scale: "1",
+            
+          }, 0.50],
+          [{
+            opacity: '0%',
+            translateY: '-25%',
+          }, 0.20],
+          [{
+            opacity: '100%',
+            translateY: '0%',
+          }, 0.30]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textInD", {
+    defaultDuration: 4000,
+    calls: [
+        [{
+            opacity: '0%',
+            scale: "1",
+            
+          }, 0.50],
+          [{
+            opacity: '0%',
+            translateX: '-25%',
+          }, 0.20],
+          [{
+            opacity: '100%',
+            translateX: '0%',
+          }, 0.30]
+    ]
+  });
+
+  $.Velocity.RegisterEffect("textInE", {
+    defaultDuration: 4000,
+    calls: [
+        [{
+            opacity: '0%',
+            scale: "1",
+            
+          }, 0.50],
+          [{
+            opacity: '0%',
+            translateX: '25%',
+          }, 0.20],
+          [{
+            opacity: '100%',
+            translateX: '0%',
+          }, 0.30]
+    ]
+  });
 
 function movement21(){
     $(".ElementA").velocity("moveDown1");
     $(".ElementB").velocity("moveDown1");
     $(".ElementC").velocity("moveDown1");
+    $(".HeadA").velocity("textInC");
+    $(".TextElementAA").velocity("textInB");
+    $(".TextElementAB").velocity("textInB");
+    $(".HeadB").velocity("textOutC");
+    $(".BackgroundBA").velocity("textOutD");
+    $(".BackgroundBB").velocity("textOutD");
+    $(".BackgroundBC").velocity("textOutD");
+    $(".BackgroundAA").velocity("textInD");
+    $(".BackgroundAB").velocity("textInE");
+    $(".BackgroundAC").velocity("textInD");
 }
 
 function movement32(){
     $(".ElementA").velocity("moveDown2");
     $(".ElementB").velocity("moveDown2");
     $(".ElementC").velocity("moveDown2");
+    $(".HeadB").velocity("textInC");
+    $(".HeadC").velocity("textOutC");
+    $(".BackgroundCA").velocity("textOutD");
+    $(".BackgroundCB").velocity("textOutD");
+    $(".BackgroundCC").velocity("textOutD");
+    $(".BackgroundBA").velocity("textInD");
+    $(".BackgroundBB").velocity("textInE");
+    $(".BackgroundBC").velocity("textInD");
 }
 
 function movement23(){
     $(".ElementA").velocity("moveUp2");
     $(".ElementB").velocity("moveUp2");
     $(".ElementC").velocity("moveUp2");
+    $(".HeadC").velocity("textInC");
+    $(".HeadB").velocity("textOutC");
+    $(".BackgroundBA").velocity("textOutD");
+    $(".BackgroundBB").velocity("textOutD");
+    $(".BackgroundBC").velocity("textOutD");
+    $(".BackgroundCA").velocity("textInD");
+    $(".BackgroundCB").velocity("textInE");
+    $(".BackgroundCC").velocity("textInD");
 }
 
 function movement12(){
     $(".ElementA").velocity("moveUp1");
     $(".ElementB").velocity("moveUp1");
     $(".ElementC").velocity("moveUp1");
+    $(".HeadB").velocity("textInC");
+    $(".HeadA").velocity("textOutC");
+    $(".TextElementAA").velocity("textOutB");
+    $(".TextElementAB").velocity("textOutB");
+    $(".BackgroundAA").velocity("textOutD");
+    $(".BackgroundAB").velocity("textOutD");
+    $(".BackgroundAC").velocity("textOutD");
+    $(".BackgroundBA").velocity("textInD");
+    $(".BackgroundBB").velocity("textInE");
+    $(".BackgroundBC").velocity("textInD");
 }
-
-function elementStackA(){
-
-}
-
 
 //</>Effects/or animations
 
@@ -199,7 +370,7 @@ $(window).on('DOMMouseScroll mousewheel', function(e) {
         forward = false;
         currentFrameFunc();
       }
-      $(".ElementA").text(mouseCheck);
+      // $(".ElementA").text(mouseCheck);
     } else {
         mouseCheck++;
       if( mouseCheck >10){
@@ -208,7 +379,7 @@ $(window).on('DOMMouseScroll mousewheel', function(e) {
         forward = true;        
         currentFrameFunc();
       }
-      $(".ElementA").text(mouseCheck);
+      // $(".ElementA").text(mouseCheck);
     }
     return false;
   }
@@ -219,20 +390,18 @@ $(window).on('DOMMouseScroll mousewheel', function(e) {
 $(window).on('keydown', function(e) {
     var keyNext = (e.which == 39 || e.which == 40|| e.which == 98|| e.which == 102|| e.which == 83|| e.which == 68),
         keyPrev = (e.which == 37 || e.which == 38 || e.which == 100|| e.which == 104|| e.which == 65|| e.which == 87);
-
     if (keyNext) {
       // e.preventDefault();
       // currentFrame++;
       // forward = true;
       // currentFrameFunc();
-      $(".HeadA").velocity("textOut");
-
-    } else if (keyPrev) {
+      $(".BackgroundA").velocity("textOutE");
+        } else if (keyPrev) {
       // e.preventDefault();
       // currentFrame--;
       // forward = false;
       // currentFrameFunc();
-      $(".HeadA").velocity("tryMe");
+      $(".BackgroundA").velocity("textInE");
     }
   });
   //</>Beginning Function for Keyboard buttons

@@ -4,30 +4,82 @@ html, body, main {
     padding:0 0 0 0;
     margin: 0 0 0 0;
     overflow: hidden;
+    background-color: black;
 }
 
 
 .ElementA{
     height:100%;
     width:100%;
-    background-color: aqua;
+    background: linear-gradient(#e5b061, #000);
 }
 .ElementB{
     height:100%;
     width:100%;
-    background-color: bisque;
+    background: linear-gradient(#a7934d, #000);
 }
 .ElementC{
     height:100%;
     width:100%;
-    background-color: brown;
+    background: linear-gradient(#aa7e3c, #000);
 }
 
+.ElementA> *,.ElementB> *,.ElementC> * {
+    color: #fff7b1;
+    z-index: 1;
+}
 
-.HeadA{
+.HeadA {
+    position: absolute;
+    top: 5vh;
+    left: 30vw;
+   font-size: 64px;
+}
+
+.HeadB ,.HeadC{
     position: absolute;
     top: 5vh;
     left: 30vw;
     font-size: 60px;
+    opacity: 0;
+}
+
+.TextElementAA{
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    font-size: 20px;
+    
+}
+
+.TextElementAB{
+    position: absolute;
+    top: 15vh;
+    left: 75vw;
+    font-size: 20px;
+}
+.BackgroundA,.BackgroundB,.BackgroundC{
+    color: #000000;
+    opacity: .5;
+    text-shadow: 2px 2px 10px black;
+    font-size: 128px;
+    font-weight: bolder;
+    z-index: 0;
+    position: absolute;
+}
+
+.BackgroundA{
+    top: 0vh;
+    left: 60vw;
+}
+
+.BackgroundB{
+    top: 30vh;
+    left: 35vw;
+}
+
+.BackgroundC{
+    top: 60vh;
+    left: 5vw;
 }
 
