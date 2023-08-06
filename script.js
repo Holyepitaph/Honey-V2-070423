@@ -250,7 +250,7 @@ $.Velocity.RegisterEffect("moveUp1", {
             translateX: '-25%',
           }, 0.20],
           [{
-            opacity: '100%',
+            opacity: '60%',
             translateX: '0%',
           }, 0.30]
     ]
@@ -269,7 +269,7 @@ $.Velocity.RegisterEffect("moveUp1", {
             translateX: '25%',
           }, 0.20],
           [{
-            opacity: '100%',
+            opacity: '60%',
             translateX: '0%',
           }, 0.30]
     ]
@@ -391,17 +391,17 @@ $(window).on('keydown', function(e) {
     var keyNext = (e.which == 39 || e.which == 40|| e.which == 98|| e.which == 102|| e.which == 83|| e.which == 68),
         keyPrev = (e.which == 37 || e.which == 38 || e.which == 100|| e.which == 104|| e.which == 65|| e.which == 87);
     if (keyNext) {
-      // e.preventDefault();
-      // currentFrame++;
-      // forward = true;
-      // currentFrameFunc();
-      $(".BackgroundA").velocity("textOutE");
+      e.preventDefault();
+      currentFrame++;
+      forward = true;
+      currentFrameFunc();
+      // $(".BackgroundA").velocity("textOutE");
         } else if (keyPrev) {
-      // e.preventDefault();
-      // currentFrame--;
-      // forward = false;
-      // currentFrameFunc();
-      $(".BackgroundA").velocity("textInE");
+      e.preventDefault();
+      currentFrame--;
+      forward = false;
+      currentFrameFunc();
+      // $(".BackgroundA").velocity("textInE");
     }
   });
   //</>Beginning Function for Keyboard buttons
