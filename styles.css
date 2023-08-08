@@ -7,6 +7,12 @@ html, body, main {
     background-color: black;
 }
 
+.containerC{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
 .ElementA{
     height:100%;
     width:100%;
@@ -43,21 +49,21 @@ html, body, main {
 .tableBL{grid-area: L;}
 .tableBM{grid-area: M;}
 .tableBN{grid-area: N;}
-.tableBO{grid-area: O;}
+.tableBO{grid-area: O; justify-self: center;}
 
 
 .tableB{
-    position: absolute;
-    top: 20vh;
+    position: relative;
+    top: 15vh;
     left: 10vw;
     border: 2px solid black;
     background-color: #a7934d;
     width: 80vw;
-    height: 40vh;
+    height: 70vh;
     border-radius: 30px;
     display: grid;
-    grid-template-columns: 50px 50px;
-    grid-template-rows: auto;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows:auto;
     grid-template-areas: 
     "A H"
     "B I"
@@ -66,12 +72,71 @@ html, body, main {
     "E L"
     "F M"
     "G N"
-    "O";
+    "O O";
+    opacity: .7;
 }
 
+.tableB>*{
+    font-size: 17px;
+    opacity: 1;
+    padding: 10px 5px 5px 15px;
+}
+
+.mapC{
+    position: relative;
+    top: 20vh;
+    border: 5px solid black;
+    height: 300px;
+    width: 35vw;
+    background-color: #e5b061;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.mapCA{
+    margin: 5%;
+    border: 2px solid black;
+    height: 200px;
+    width: 30vw;
+}
+
+.mapCB{
+    margin: 0 5px 0 10px;
+}
+
+.contactC{
+    position: relative;
+    top: 20vh;
+    right: 1px;
+    width: 50vw;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contactCA{
+    border: 5px solid black;
+    background-color: #aa7e3c;
+    border-radius: 20px;
+    padding: 5px;
+}
+.contactCB{
+    border: 5px solid black;
+    background-color: #aa7e3c;
+    border-radius: 20px;
+    padding: 5px;
+}
+.contactCC{
+    border: 5px solid black;
+    background-color: #aa7e3c;
+    border-radius: 20px;
+    padding: 5px;
+}
 /* Testing */
 .BackgroundBA, .BackgroundBB, .BackgroundBC, .BackgroundCA, .BackgroundCB, .BackgroundCC{
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 
@@ -81,30 +146,62 @@ html, body, main {
     color: #000000;
     text-shadow: 2px 2px 10px black;
     font-weight: bolder;
-    z-index: 0;
-    position: absolute;
+    z-index: -1;
+    font-size: 60px;
+    position: relative;
 }
 
-.BackgroundA{
+.BackgroundAA{
     top: 5vh;
     left: 60vw;
-    font-size: 60px;
     opacity: .3;
 }
 
-.BackgroundB{
-    top: 40vh;
+.BackgroundAB{
+    top: 20vh;
     left: 35vw;
-    font-size: 60px;
     opacity: .4;
 }
 
-.BackgroundC{
-    bottom: 10vh;
+.BackgroundAC{
+    top: 40vh;
     left: 5vw;
-    font-size: 60px;
     opacity: .7;
 }
+
+.BackgroundBA{
+    top:-65vh;
+    left: 60vw;
+    opacity: .3;
+}
+.BackgroundBB{
+    top:-45vh;
+    left: 35vw;
+    opacity: .4;
+}
+.BackgroundBC{
+    top:-25vh;
+    left: 5vw;
+    opacity: .7;
+}
+
+.BackgroundCA{
+    top: -50vh;
+    left: 60vw;
+    opacity: .3;
+}
+.BackgroundCB{
+    top: -35vh;
+    left: 35vw;
+    opacity: .4;
+    z-index: -1;
+}
+.BackgroundCC{
+    top: -10vh;
+    left: 5vw;
+    opacity: .3;
+}
+
 
 .HeadA {
     position: absolute;
@@ -147,20 +244,264 @@ html, body, main {
     top: 28vh;
     left: 35vw;
     width:150px;
-
 }
 
 
 
 /* Media Queries */
 @media screen and (min-width:768px){
+    .HeadA {
+        top: 5vh;
+        left: 29vw;
+       font-size: 70px;
+    }
+
+    .imageA{
+        top: 28vh;
+        left: 41vw;
+        width:150px;
+    }
+
+    .tableB{
+        top: 10vh;
+        left: 10vw;
+        grid-template-columns: 28vw 28vw 28vw;
+        grid-template-areas: 
+        "A F K"
+        "B G L"
+        "C H M"
+        "D I N"
+        "E J O";
+        padding: 5px 0 0 0;
+    }
+
+    .tableB>*{
+        font-size: 20px;
+    }
+
+    .tableBO{justify-self: normal;}
+
+    .TextElementAA{
+        position: absolute;
+        top: 22vh;
+        left: 5vw;
+        font-size: 24px;
+        width: 25vw;
+    }
+    
+    .TextElementAB{
+        position: absolute;
+        top: 52vh;
+        left: 70vw;
+        font-size: 24px;
+        width:25vw;
+    }
+
+    .BackgroundAA{
+        top: 5vh;
+        left: 70vw;
+        opacity: .3;
+        z-index: 1;
+    }
+    
+    .BackgroundAB{
+        top: 20vh;
+        left: 45vw;
+        opacity: .4;
+        z-index: 0;
+    }
+    
+    .BackgroundAC{
+        top: 40vh;
+        left: 5vw;
+        opacity: .7;
+        z-index: 1;
+    }
+
+    .BackgroundBA{
+        top:-75vh;
+        left: 60vw;
+        opacity: .3;
+    }
+    .BackgroundBB{
+        top:-45vh;
+        left: 35vw;
+        opacity: .4;
+    }
+    .BackgroundBC{
+        top:-16vh;
+        left: 5vw;
+        opacity: .7;
+    }
+
+    .BackgroundCA{
+        top: -70vh;
+        left: 70vw;
+        opacity: .3;
+    }
+    .BackgroundCB{
+        top: -55vh;
+        left: 45vw;
+        opacity: .4;
+        z-index: -1;
+    }
+    .BackgroundCC{
+        top: -30vh;
+        left: 5vw;
+        opacity: .3;
+    }
+
+    .mapC{
+        top: 10vh;
+        height: 400px;
+        z-index: 2;
+    }
+    
+    .mapCA{
+        height: 200px;
+    }
+    
+    .mapCB{
+        margin: 30px 5px 0 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .contactC{
+        position: relative;
+        top: 10vh;
+        right: 1px;
+        height: 400px;
+        font-size: 25px;
+    }
 
 }
 
 @media screen and (min-width:992px){
+    .HeadA {
+        top: 5vh;
+        left: 34.5vw;
+       font-size: 70px;
+    }
 
-}
+    .imageA{
+        top: 28vh;
+        left: 44vw;
+        width:150px;
+    }
 
-@media screen and (min-width:1200px){
+    .BackgroundA,.BackgroundB,.BackgroundC{ font-size: 100px;}
 
+    .tableB{
+        top: 10vh;
+        left: 10vw;
+        grid-template-columns: 26vw 26vw 26vw;
+        grid-template-areas: 
+        "A F K"
+        "B G L"
+        "C H M"
+        "D I N"
+        "E J O";
+        padding: 5px 0 0 20px;
+    }
+
+    .tableB>*{
+        font-size: 24px;
+    }
+
+    .tableBO{justify-self: normal;}
+
+    .TextElementAA{
+        position: absolute;
+        top: 22vh;
+        left: 5vw;
+        font-size: 26px;
+        width: 25vw;
+    }
+    
+    .TextElementAB{
+        position: absolute;
+        top: 52vh;
+        left: 72vw;
+        font-size: 26px;
+        width:25vw;
+    }
+
+    .BackgroundAA{
+        top: 0vh;
+        left: 70vw;
+        opacity: .3;
+        z-index: 1;
+    }
+    
+    .BackgroundAB{
+        top: 5vh;
+        left: 40vw;
+        opacity: .4;
+        z-index: 0;
+    }
+    
+    .BackgroundAC{
+        top: 15vh;
+        left: 5vw;
+        opacity: .7;
+        z-index: 1;
+    }
+
+    .BackgroundBA{
+        top:-75vh;
+        left: 60vw;
+        opacity: .3;
+    }
+    .BackgroundBB{
+        top:-45vh;
+        left: 35vw;
+        opacity: .4;
+    }
+    .BackgroundBC{
+        top:-50vh;
+        left: 5vw;
+        opacity: .7;
+    }
+
+    .BackgroundCA{
+        top: -70vh;
+        left: 65vw;
+        opacity: .3;
+    }
+    .BackgroundCB{
+        top: -55vh;
+        left: 45vw;
+        opacity: .4;
+        z-index: -1;
+    }
+    .BackgroundCC{
+        top: -45vh;
+        left: 5vw;
+        opacity: .3;
+    }
+
+    .mapC{
+        top: 10vh;
+        height: 400px;
+        z-index: 2;
+    }
+    
+    .mapCA{
+        height: 200px;
+    }
+    
+    .mapCB{
+        margin: 30px 5px 0 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .contactC{
+        position: relative;
+        top: 10vh;
+        right: 1px;
+        height: 400px;
+        font-size: 25px;
+    }
 }

@@ -224,7 +224,6 @@ $.Velocity.RegisterEffect("moveUp1", {
         [{
             opacity: '0%',
             scale: "1",
-            
           }, 0.50],
           [{
             opacity: '0%',
@@ -269,7 +268,7 @@ $.Velocity.RegisterEffect("moveUp1", {
             translateX: '25%',
           }, 0.20],
           [{
-            opacity: '60%',
+            opacity: '40%',
             translateX: '0%',
           }, 0.30]
     ]
@@ -282,7 +281,7 @@ function movement21(){
     $(".HeadA").velocity("textInC");
     $(".TextElementAA").velocity("textInB");
     $(".TextElementAB").velocity("textInB");
-    $(".HeadB").velocity("textOutC");
+    $(".tableB").velocity("textOutC");
     $(".BackgroundBA").velocity("textOutD");
     $(".BackgroundBB").velocity("textOutD");
     $(".BackgroundBC").velocity("textOutD");
@@ -295,8 +294,8 @@ function movement32(){
     $(".ElementA").velocity("moveDown2");
     $(".ElementB").velocity("moveDown2");
     $(".ElementC").velocity("moveDown2");
-    $(".HeadB").velocity("textInC");
-    $(".HeadC").velocity("textOutC");
+    $(".tableB").velocity("textInC");
+    $(".containerC").velocity("textOutC");
     $(".BackgroundCA").velocity("textOutD");
     $(".BackgroundCB").velocity("textOutD");
     $(".BackgroundCC").velocity("textOutD");
@@ -309,8 +308,8 @@ function movement23(){
     $(".ElementA").velocity("moveUp2");
     $(".ElementB").velocity("moveUp2");
     $(".ElementC").velocity("moveUp2");
-    $(".HeadC").velocity("textInC");
-    $(".HeadB").velocity("textOutC");
+    $(".containerC").velocity("textInC");
+    $(".tableB").velocity("textOutC");
     $(".BackgroundBA").velocity("textOutD");
     $(".BackgroundBB").velocity("textOutD");
     $(".BackgroundBC").velocity("textOutD");
@@ -323,7 +322,7 @@ function movement12(){
     $(".ElementA").velocity("moveUp1");
     $(".ElementB").velocity("moveUp1");
     $(".ElementC").velocity("moveUp1");
-    $(".HeadB").velocity("textInC");
+    $(".tableB").velocity("textInC");
     $(".HeadA").velocity("textOutC");
     $(".TextElementAA").velocity("textOutB");
     $(".TextElementAB").velocity("textOutB");
